@@ -10,6 +10,10 @@ permissions: {}
 
 jobs:
   test-dev:
-    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'l10nbot' }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
     steps:
       - run: 'echo "No build required"'
