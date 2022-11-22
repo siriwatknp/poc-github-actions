@@ -5,17 +5,11 @@ on:
     paths:
       - 'docs/**'
       - 'examples/**'
-      
+
 permissions: {}
 
 jobs:
   test-dev:
-    # l10nbot does not affect dev scripts.
-    if: ${{ github.actor != 'l10nbot' }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.actor }}"
-      - run: echo yeah!
+      - run: 'echo "No build required"'
