@@ -5,8 +5,12 @@ on:
     paths:
       - 'docs/**'
       - 'examples/**'
-      - '!docs/**'
-      - '!examples/**'
+      - '!framer/**'
+      - '!modules/**'
+      - '!netlify/**'
+      - '!packages/**'
+      - '!scripts/**'
+      - '!test/**'
 
 permissions: {}
 
